@@ -9,15 +9,15 @@
 <body>
 <h1>Space Cliker</h1>
 <p>Score: <span>id="Score">0</span></p>
-<img src="darkmatter.jpeg">
+<img src="darkmatter.jpeg" onclick="addToScore(1)">
 
 <script>
   var score = 0
 
-  score = score + 1;
-
-  document.getElementById("").innerHTML = score;
-  
+  function addToScore (amount) {
+    score = score + amount;
+    document.getElementById("").innerHTML = score;
+  }
 </script>
 </body>
 </html>
