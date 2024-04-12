@@ -9,10 +9,25 @@
       <p>Score: <span id="score">0</span></p>
       <img src="darkmatter.jpeg" height="256px" width="256px" onclick="addToScore(1)">
 
-      <button>Alien [<span id="aliencost">10</span></button>] -- <span id="aliens">0</span></button>
+      <button onClick="buyAlien()">Alien [<span id="aliencost">10</span>] -- <span id="aliens">0</span></button>
     
       <script>
         var score = 0
+
+        var alienCost = 10:
+        var aliens = 0;
+
+        function buyAliens() {
+          if (score >= alienCost) {
+            score = score - alienCost;
+            aliens = aliens + 1;
+            alienCost = Math.round(alienCost * 1.15);
+
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("aliens").innerHTML = aliens;
+            document.getElementById("alienCost").innerHTML = alienCost;
+          }
+        }
     
         function addToScore(amount) {
           score = score + amount;
