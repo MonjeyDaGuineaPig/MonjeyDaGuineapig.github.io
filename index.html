@@ -14,32 +14,13 @@
         
         var alienCost = 10;
         var aliens = 0;
-
-        var astronautCost = 100;
-        var astronauts = 0;
-        function buyAliens() {
+        function buyAlien() {
           if (score >= alienCost) {
             score = score - alienCost;
             aliens = aliens + 1;
             alienCost = Math.round(alienCost * 1.15);
-
-            document.getElementById("score").innerHTML = score;
-            document.getElementById("aliens").innerHTML = aliens;
-            document.getElementById("alienCost").innerHTML = alienCost;
           }
         }
-        function buyAstronauts() {
-          if (score >= astronautCost) {
-            score = score - astronautCost;
-            astronauts = astronauts + 1;
-            astronautCost = Math.round(astronautCost * 1.15);
-
-            document.getElementById("score").innerHTML = score;
-            document.getElementById("astronauts").innerHTML = astronauts;
-            document.getElementById("astronautCost").innerHTML = astronautCost;
-          }
-        }
-    
       function addToScore(amount) {
         score = score + amount;
         document.getElementById("score").innerHTML = score;
