@@ -1,4 +1,102 @@
-body {
-  background-image: url(‘https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg’);
-  color: #FFFFFF;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/*text stuff*/
+
+.text {
+color:#2c2b2b;
+font-family: 'Roboto', sans-serif;
+font-size: medium;
 }
+
+.independent {
+    color : #ffffff;
+}
+
+/*tower stuff*/
+
+.tower {
+    align-items: center; 
+    border-radius: 10px;
+    border:  solid  #203C50;
+    border-width: 1px;
+    background-color: #afab9e;
+    margin-right: 7px;
+    transition: all .1s ;
+}
+
+
+.tower:hover {
+    background-color: hsla(46, 10%, 67%, 0.788);
+    cursor: pointer;
+    transform: scale(1.0420);
+   
+}
+
+.tower:active {
+    transform: scale(.9569);
+}
+
+/*background*/
+
+body {
+    background-image:linear-gradient(to right, #0c315a, #407bbd);
+}
+
+
+
+/*clicker stuff*/
+
+.clicker {
+    transition: all .05s ;
+    position: relative;
+
+
+}
+
+.clicker:hover {
+    cursor: pointer;
+        transform: scale(.9569);
+}
+
+.clicker:active {
+    transform: scale(1.05420);
+}
+
+/*left section*/
+
+.sectionleft {
+    float: left;
+    width: 0%;
+}
+
+
+.reset {
+    font-size: 25px;
+}
+
+
+.head {
+    font-size: 27px ;
+}
+
+/*right section */
+
+.sectioncenter {
+    position: static;
+    float: center;
+    width: 550px;
+}
+
+/*shhh*/
+
+.nothiddentext {
+    opacity: 00;
+    top: 1%;
+    position:absolute;
+
+}
+
+.nothiddentext:hover {
+    opacity: 100%;
+}
+
