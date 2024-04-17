@@ -7,16 +7,20 @@
     <body>
       <h1>Space Cliker</h1>
       <p>Score: <span id="score">0</span></p>
-      <img src="darkmatter.jpeg" onclick="addToScore(1)">
+      <img src="darkmatter.jpeg" onclick="addToScore(clickingPower)">
 
       <button onclick="buyAlien()">Alien [<span id="aliencost">10</span>] -- <span id="aliens">0</span></button>
+      <button onclick="buyAstronaut()">Astronaut [<span id="astronautcost">100</span>] -- <span id="astronauts">0</span></button>
     
       <script>
         var score = 0
-
-        var alienCost = 10:
+        var clickingPower = 1;
+        
+        var alienCost = 10;
         var aliens = 0;
 
+        var astronautCost = 100;
+        var astronauts = 0;
         function buyAliens() {
           if (score >= alienCost) {
             score = score - alienCost;
@@ -26,6 +30,17 @@
             document.getElementById("score").innerHTML = score;
             document.getElementById("aliens").innerHTML = aliens;
             document.getElementById("alienCost").innerHTML = alienCost;
+          }
+        }
+        function buyAstronauts() {
+          if (score >= astronautCost) {
+            score = score - astronautCost;
+            astronauts = astronauts + 1;
+            astronautCost = Math.round(astronautCost * 1.15);
+
+            document.getElementById("score").innerHTML = score;
+            document.getElementById("astronauts").innerHTML = astronauts;
+            document.getElementById("astronautCost").innerHTML = astronautCost;
           }
         }
     
