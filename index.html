@@ -1,0 +1,20 @@
+<HTML>
+  <head>
+    <title>Space Clicker</title>
+  </head>
+  <body>
+    <p>Score: <span id="score">0</span></p>
+    <img src="darkmatter.jpeg" onClick="addToScore(1)">
+
+    <script>
+      var score = 0;
+
+      function addToScore(amount) {
+        score = score + amount;
+        document.getElementById("score").innerHTML = score;
+      }
+
+      
+    </script>
+  </body>
+</HTML>
